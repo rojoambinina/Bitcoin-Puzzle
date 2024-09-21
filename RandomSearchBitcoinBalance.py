@@ -1,7 +1,7 @@
 import bit
 import random
-x=int(input("'start range Min 1-115792089237316195423570985008687907852837564279074904382605163141518161494335 -> "))
-y=int(input("stop range Max 115792089237316195423570985008687907852837564279074904382605163141518161494336 -> "))
+x=int(input("'start range Min 1-00000000000000000000000000000000000000000001-> "))
+y=int(input("stop range Max ffffffffffffffffffff -> "))
 k = 1
 while True:
     key = bit.Key.from_int(random.randint(x,y))
@@ -10,7 +10,7 @@ while True:
     if key.get_balance('mbtc') > str(ran)  :
         print("Matching Key ==== Found!!!\n PrivateKey: " + key.to_wif())
         f=open(u"winner.txt","a")
-        f.write('\nBitcoin Address: ' + key.address)
+        f.write('\nBitcoin Address: ' + key.15qsCm78whspNQFydGJQk5rexzxTQopnHZ)
         f.write('\nPrivateKey (hex): ' + key.to_hex())
         f.write('\nPrivateKey (wif): ' + key.to_wif())
         f.write('\n==================================')
